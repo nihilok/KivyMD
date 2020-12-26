@@ -937,7 +937,7 @@ class MDDataTable(BaseDialog):
         self.table_data.fbind("scroll_x", self._scroll_with_header)
         self.ids.container.add_widget(self.header)
         self.ids.container.add_widget(self.table_data)
-        if self.use_pagination:
+        if self.use_pagination and self.row_data:
             self.ids.container.add_widget(self.pagination)
         Clock.schedule_once(self.create_pagination_menu, 0.5)
 
